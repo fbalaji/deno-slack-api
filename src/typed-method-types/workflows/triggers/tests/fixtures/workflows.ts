@@ -70,3 +70,4 @@ export type CustomizableInputWorkflow = ExampleWorkflow & {
     required: ["customizable"];
   };
 };
+
