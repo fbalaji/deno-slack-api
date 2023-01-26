@@ -78,5 +78,3 @@ export type WorkflowInputs<WorkflowDefinition extends WorkflowSchema> =
     : [keyof WorkflowDefinition["input_parameters"]] extends [string]
       ? WorkflowInputsType<NonNullable<WorkflowDefinition["input_parameters"]>>
     : EmptyInputs;
-
-    

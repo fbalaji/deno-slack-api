@@ -582,4 +582,3 @@ Deno.test("Trigger inputs are powered by generics", async (t) => {
   });
   mf.reset();
 });
-
