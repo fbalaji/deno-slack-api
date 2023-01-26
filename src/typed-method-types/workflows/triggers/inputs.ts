@@ -11,9 +11,17 @@ export type InputParameterSchema = {
 };
 
 /** The structure that must be provided to the workflow input to pass a value */
-type WorkflowInput = {
+type WorkflowInput = WorkflowInputValue | WorkflowInputCustomizableValue;
+
+type WorkflowInputValue = {
   // deno-lint-ignore no-explicit-any
   value: any;
+  customizable_value?: never;
+};
+
+type WorkflowInputCustomizableValue = {
+  customizable_value: boolean;
+  value?: never;
 };
 
 /** The structure for when inputs are empty */
